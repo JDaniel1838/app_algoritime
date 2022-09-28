@@ -1,0 +1,69 @@
+<!-- Herencia -->
+{% extends 'Algoritime_app/base.html' %}
+
+<!-- Importamos static -->
+{% load static %}
+
+{% block title%} 
+    Tools
+{% endblock %}
+
+<!-- Bloque css -->
+{% block css%}
+    <link rel="stylesheet" href="{% static 'app/css/inicio.css' %}">
+{% endblock %}
+
+{% block content%}
+<main class="main">
+    <div class="conteinar">
+        <a href="{%url 'binario_decimal'%}" id="contBinDec"><img src="{% static 'app/img/app1.svg' %}" alt="Icono Binario a Decimal"></a>
+        <h2>Binario a Decimal</h2>
+    </div>
+
+    <div class="conteinar">
+        <a href="{% url 'decimal_octal' %}" id="convOctalDec"><img src="{% static 'app/img/app2.svg' %}" alt="Icono Binario a Decimal"></a>
+        <h2>Decimal a Octal</h2>
+    </div>
+    
+    <div class="conteinar">
+        <a href="{% url 'app_desarrollo'%}" id="sumaFracc"><img src="{% static 'app/img/app3.svg' %}" alt="Icono Binario a Decimal"></a>
+        <h2>Suma de Fracciones</h2>
+    </div>
+    
+    <div class="conteinar">
+        <a href="{% url 'app_desarrollo'%}" id="multFraccs"><img src="{% static 'app/img/app4.svg' %}" alt="Icono Binario a Decimal"></a>
+        <h2>Mult. de Fracciones</h2>
+    </div>
+    
+    <div class="conteinar">
+        <a href="{% url 'app_desarrollo'%}" id="divFracc"><img src="{% static 'app/img/app5.svg' %}" alt="Icono Binario a Decimal"></a>
+        <h2>División de Fracciones</h2>
+    </div>
+
+    <div class="conteinar">
+        <a href="{% url 'app_desarrollo'%}" id="restaFracc"><img src="{% static 'app/img/app6.svg' %}" alt="Icono Binario a Decimal"></a>
+        <h2>Resta de Fracciones</h2>
+    </div>
+
+    <div class="conteinar">
+        <a href="{% url 'app_desarrollo'%}" id="hexaDecim"><img src="{% static 'app/img/app7.svg' %}" alt="Icono Binario a Decimal"></a>
+        <h2>Hexa a Decimal</h2>
+    </div>
+    
+    <div class="conteinar">
+        <a href="{% url 'app_desarrollo'%}" id="OctalDecim"><img src="{% static 'app/img/app8.svg' %}" alt="Icono Binario a Decimal"></a>
+        <h2>Octal a Binario</h2>
+    </div>
+</main>
+{% endblock%}
+<!-- Scripts de Pagina -->
+
+<!-- Librería de etiquetas -->
+{% block JavaScript %}
+
+<script src="{% static 'app/js/library/popper.min.js' %}"></script>
+<script src="{% static 'app/js/library/tippy-bundle.umd.js' %}"></script>
+
+<!-- Lógica Pagina -->
+<script src="{% static 'app/js/main/etiquetas.js' %}" type="module"></script>
+{% endblock%}

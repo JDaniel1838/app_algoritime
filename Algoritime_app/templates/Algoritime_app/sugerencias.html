@@ -1,0 +1,27 @@
+<!-- Herencia -->
+{% extends 'Algoritime_app/base.html' %}
+
+<!-- Importamos static -->
+{% load static %}
+
+{% block title%} 
+    Sugerencias
+{% endblock %}
+
+<!-- Bloque css -->
+{% block css%}
+    <link rel="stylesheet" href="{% static 'app/css/sugerencias.css' %}">
+{% endblock %}
+
+{% block content%}
+    <main>
+        <h1>SUGERENCIAS</h1>
+        
+        <div class="container">
+            <img src="{% static 'app/img/idea.svg' %}" alt="Imagen de Idea">
+            <br>
+            <h4>Si tienes alguna idea o sugerencia para mejorar la aplicación, nos puedes mandar un correo a: <a href="mailto:algoritimeapp@gmail.com">algoritimeapp@gmail.com</a></h4>
+        </div>
+        
+    </main>
+{% endblock %}

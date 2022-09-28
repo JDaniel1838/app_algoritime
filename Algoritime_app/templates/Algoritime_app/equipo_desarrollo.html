@@ -1,0 +1,37 @@
+<!-- Herencia -->
+{% extends 'Algoritime_app/base.html' %}
+
+<!-- Importamos static -->
+{% load static %} {% block title%} Equipo de Desarrollo {% endblock %}
+
+<!-- Bloque css -->
+{% block css%}
+<link rel="stylesheet" href="{% static 'app/css/equipoDesarrollo.css' %}"> {% endblock %} {% block content%}
+<main>
+    <h1>EQUIPO DE DESARROLLO</h1>
+
+    <div class="container">
+        <div>
+            <h4>Cristhian Carreto Cebada</h4>
+            <h3>Programador Backend</h3>
+            <p>cristhiancarretoc@gmail.com</p>
+        </div>
+        <div>
+            <h4>Enrique Ramos Regente</h4>
+            <h3>Administrador de Base de Datos</h3>
+            <p>somar3218@gmail.com</p>
+        </div>
+        <div>
+            <h4>Juan Daniel Espíndola Pérez</h4>
+            <h3>Diseñador UI/UX</h3>
+            <p>j.danielesp8062@gmail.com</p>
+        </div>
+        <div>
+            <h4>Alan Rodríguez Victorino</h4>
+            <h3>Programador Frontend</h3>
+            <p>alanrodriguez120@gmail.com</p>
+        </div>
+    </div>
+
+</main>
+{% endblock%}

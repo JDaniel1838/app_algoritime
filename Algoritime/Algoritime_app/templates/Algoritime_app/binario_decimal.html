@@ -1,0 +1,76 @@
+<!-- Herencia -->
+{% extends 'Algoritime_app/base.html' %}
+
+<!-- Importamos static -->
+{% load static %}
+
+{% block title%} 
+    Binario a Decimal
+{% endblock %}
+
+<!-- Bloque css -->
+
+{% block css%}
+    <link rel="stylesheet" href="{% static 'app/css/binarioDecimal.css' %}">
+{% endblock %}
+
+<!-- Importamos static -->
+{% load static %}
+
+{% block content%}
+<main class="binarioDecimal">
+    <h1 class="degradado">Binario a Decimal</h1>
+    <form>
+        <input id="InputBinario" type="text">
+        <input id="convBinDec" type="button" value="Convertir">
+    </form>
+
+    <h3 class="resultado">Resultado: </h3>
+    <h4 class="numResultado" id="resultado">  </h4>
+    <div>
+        <div class="Divprocedimiento">
+            
+            <div class="procedimiento">
+                <h3>Procedimiento</h3>
+                <h5>1.Ordenamos los números de derecha a izquierda.</h5>
+                <div class="NumDerecha" id="Ordenados">
+                    
+                </div>
+                <h5>2.Asignamos una potencia con base 2 a cada numero</h5>
+                <div class="NumDerecha" id="PonteciasNum">
+                    
+                </div>
+                <div class="NumDerecha" id="PonteciasDos">
+                    
+                </div>
+                <h5>3.Multiplicamos el numero por la potencia y sumamos los resultados</h5>
+                <div class="NumDerecha" id="Multiplicacion">
+                    
+                </div>
+                <div class="NumDerecha" id="Resultados">
+                    
+                </div>
+                <h5>4.Sumamos todos los resultados</h5>
+                <h4 id="resultado2" class="Resultado2"></h4>
+                <!-- Vista Ocultando Resultados -->
+                <div id="noMostrar" class="NoMostrar activo">
+                    <button id="MostrarResultados">Mostrar Resultados</button>
+                </div>
+            </div>
+            
+        </div>
+        
+    </div>
+</main>
+<div class="VentanaEmergente">
+    <div class="Card">
+        <h5 id="MensajeVentana">Texto Mensaje</h5>
+        <button id="CerrarVentana">Cerrar</button>
+    </div>
+</div>
+{% endblock%}
+
+{% block JavaScript %}
+<!-- Scripts de pagina -->
+<script src="{% static 'app/js/main/binarioDecimal.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,458 @@
+/*  Ubuntu: font-family: 'Ubuntu', sans-serif;
+    Opent Sant: font-family: 'Open Sans', sans-serif;
+*/
+:root{
+    --Ubuntu: 'Ubuntu', sans-serif;
+    --Sant: 'Open Sans', sans-serif;
+    --negro: #29323C;
+    --naranja1:#FC6076;
+    --border1:1px solid #000;
+    --azulmarino:#3C4A83;
+    /* --bg-color:#dfe9f3; */
+    --bg-color:#e0e5ec;
+    --Sombras: 9px 9px 16px #A3B1C6, -9px -9px 16px #ffffff;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+
+body{
+    font-family: var(--Ubuntu);
+    position: relative;
+    background-color: var(--bg-color);
+}
+
+body::-webkit-scrollbar {
+    width: 16px;     /* Tamaño del scroll en vertical */
+    height: 16px;    /* Tamaño del scroll en horizontal */
+}
+
+body::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #FF9A44 0%, #FC6076 100%);
+    border-radius: 4px;
+}
+
+body::-webkit-scrollbar-track{
+    background: var(--bg-color);
+}
+
+
+
+/* INICIA HEADER */
+header{
+    width: 100%;
+    height: 4.5rem;
+    background-color: var(--bg-color);
+    overflow-x: hidden;
+}
+
+header > nav{
+    width: 100%;
+    height: 4.5rem;
+    display: flex;
+    flex-direction: row;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    background-color: var(--bg-color);
+    position: fixed;
+    justify-content: space-between;
+    padding: 0 5%;
+    align-items: center;
+}
+
+header > nav.sombra{
+    box-shadow: 0 2px 3px 0 rgba(0, 0, 0, 0.25);
+}
+
+header > nav > .nav_logo{
+    width: 3.5rem;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    text-decoration: none;
+    border-radius: 50%;
+    margin: .75rem 0;
+    box-shadow:  9px 9px 16px #A3B1C6,
+    -9px -9px 16px #ffffff;
+}
+
+header > nav > .nav_logo> img{
+    height: 3rem;
+    width:3rem;
+    padding: .5rem;
+}
+
+header > nav > .nav_logo> h1{
+    font-size: 1.5rem;
+    letter-spacing: .7rem;
+    color: var(--negro);
+}
+
+header > nav > .nav_links{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+}
+
+header > nav > .nav_links > .linkBlog{
+    font-size: 1rem;
+    color: var(--naranja1);
+    font-weight: 900;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    transition: .3s;
+    background: linear-gradient(180deg, #FF9A44 0%, #FC6076 100%);
+    color: #fff;
+    padding: .8rem 1.6rem;
+    border-radius: 20px;
+    outline: none;
+    border: none;
+    box-shadow:  var(--Sombras);
+}
+
+header > nav > .nav_links > .iconBlog > img{
+    width: 0;
+    height: 0;
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+header > nav > .nav_links > .linkPerfil > img{
+    width: 3.2rem;
+    height: auto;
+    margin: auto 0;
+    border-radius: 50%;
+    box-shadow:  9px 9px 16px #A3B1C6,
+    -9px -9px 16px #ffffff;
+}
+
+/* -------------TERMINA HEADER----------------- */
+main{
+    width: 90%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0 auto;
+}
+
+main h1{
+    font-size: 3rem;
+    font-weight: bold;
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
+    letter-spacing: .3rem;
+    margin:2rem 0 2rem;
+    text-align: center;
+}
+
+
+main h1:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-color: var(--negro);
+    mix-blend-mode: screen; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+main .container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+} 
+
+.container div{
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+}
+
+
+.container div h2,h3,h4,h5,h6,p{
+    font-family: var(--Ubuntu);
+    margin: .4rem 0;
+}
+
+.container div a{
+    font-family: var(--Sant);
+}
+
+
+/* -------------INICIA MAIN-------------------- */
+
+
+
+/* Estilos footer */
+footer{
+    width: 100%;
+    height: auto;
+    background-color: var(--bg-color);
+}
+
+footer .containerFotter{
+    width: 90%;
+    height: 100%;
+    background-color: var(--bg-color);
+    box-shadow: var(--Sombras);
+    border-radius: 18px 18px 0 0;
+    padding: 1rem 0;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.containerFotter h5{
+    font-size: 3rem;
+    font-weight: bold;
+    display: inline-block;
+    color: #000;
+    background: #fff;
+    mix-blend-mode: multiply;
+    position: relative;
+    letter-spacing: .3rem;
+    margin: 1rem 0 2rem;
+}
+
+.containerFotter h5:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+    mix-blend-mode: screen; 
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+
+.containerFotter .containerLinks{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-evenly;
+}
+
+.containerLinks .grouplinks1, .grouplinks2{
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 1rem 1rem 3rem;
+    width: 25%;
+    align-items: flex-start;
+}
+
+.grouplinks1 a,.grouplinks2 a{
+    color: var(--azulmarino);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-decoration: none;
+}
+
+.containerLinks .creditos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+} 
+
+.creditos > img{
+    width: 5.4rem;
+    height: auto;
+    padding: .9rem;
+    margin: 1rem 2rem 1rem 2rem;
+    box-shadow: var(--Sombras);
+    background-color: var(--bg-color);
+    border-radius: 25%;
+}
+
+.creditos > p{
+    font-size: 1.1rem;
+    color: var(--azulmarino);
+    margin-top: .5rem;
+    font-family: var(--Sant);
+    text-align: center;
+}
+
+
+
+
+
+/* DISEÑO ADAPTABLE DE HEADER */
+
+@media screen and (max-width: 1100px) {
+    html{
+        font-size: 16px;
+    }
+
+    
+    /* header > nav > .nav_logo{
+        
+    } */
+
+    header > nav > .nav_links{
+        width: 20%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    html{
+        font-size: 15px;
+    }
+
+    header > nav > .nav_links{
+        width: 20%;
+    }
+
+}
+
+@media screen and (max-width: 860px) {
+    html{
+        font-size: 14px;
+    }
+
+    header > nav > .nav_links{
+        width: 25%;
+    }
+
+
+    /*---footer-- */
+    .containerFotter .containerLinks{
+        flex-wrap: wrap;
+    }
+
+    .containerLinks .grouplinks1, .grouplinks2{
+        display: flex;
+        flex-direction: column;
+        margin: 1rem 1rem 1rem 3rem;
+        width: 35%;
+        align-items: flex-start;
+    }
+
+    .containerLinks .creditos{
+        width: 65%;
+    } 
+}
+
+
+@media screen and (max-width: 768px) {
+    /* header > nav > .nav_logo{
+        width: 55%;
+    } */
+
+    header > nav > .nav_links{
+        width: 25%;
+        justify-content: space-evenly;
+    }
+
+    /* Mostramos el icono de blog */
+    /* header > nav > .nav_links > .iconBlog{
+        visibility: visible;
+        opacity: 1;
+        width: 3.5rem;
+        height: 3.5rem;
+        display: flex;
+        align-items: center;
+        justify-content:center;
+        text-decoration: none;
+        border-radius: 50%;
+        margin: .75rem 0;
+        box-shadow:  var(--Sombras);
+    } */
+
+    header > nav > .nav_links > .iconBlog > img{
+        height: 3rem;
+        width:3rem;
+        padding: .5rem;
+    }
+
+    /* Ocultamos el texto de blog */
+    /* header > nav > .nav_links > .linkBlog{
+        width: 0;
+        visibility: hidden;
+        opacity: 0;
+        height: 0;
+        display: none;
+    } */
+
+}
+
+@media screen and (max-width: 600px) {
+    html{
+        font-size: 13px;
+    }
+
+    /* header > nav > .nav_logo{
+        width: 65%;
+    } */
+
+    /* header */
+    .containerLinks .grouplinks1, .grouplinks2 {
+        width: 45%;
+        margin: 1rem;
+        align-items: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    html{
+        font-size: 12px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    html{
+        font-size: 11px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+
+    header > nav > .nav_links{
+        width: 30%;
+    }
+
+    /* footer */
+    .containerFotter h5 {
+        font-size: 2.5rem;
+    }
+
+    .containerLinks .grouplinks1, .grouplinks2 {
+        width: 65%;
+    }
+}
+
+@media screen and (max-width: 320px) {
+
+    html{
+        font-size: 10px;
+    }
+}

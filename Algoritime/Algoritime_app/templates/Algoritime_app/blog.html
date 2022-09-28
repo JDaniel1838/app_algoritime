@@ -1,0 +1,43 @@
+<!-- Herencia -->
+{% extends 'Algoritime_app/base.html' %}
+
+<!-- Importamos static -->
+{% load static %}
+
+{% block title%} 
+    Blog
+{% endblock %}
+
+{% block tipografia%} 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+{% endblock %}
+
+<!-- Bloque css -->
+{% block css%}
+    <link rel="stylesheet" href="{% static 'app/css/blog.css' %}">
+{% endblock %}
+
+{% block content%}
+
+    <main class="blog">
+        <h1>¡Nuestro Blog!</h1>
+        {% for post in posts %}
+            <div class="CardPrincipal">
+                <div class="DivImg">
+                    <img src="{{ post.imagen.url }}" alt="Imagen de {{post.titulo}}">
+                </div>
+                
+                <div class="PostContent">
+                    <a href="{% url 'articulo' post.id %}" class="PostTitle">{{post.titulo}}</a>
+                    <p class="PostDescription">{{post.descripcion}}</p>
+                    <div class="headersPost">
+                        <p class="autor-post">{{post.created}}</p>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </main>
+
+{% endblock%}

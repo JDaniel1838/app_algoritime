@@ -1,0 +1,26 @@
+<!-- Herencia -->
+{% extends 'Algoritime_app/base.html' %}
+
+<!-- Importamos static -->
+{% load static %}
+
+{% block title%} 
+    Sugerencias
+{% endblock %}
+
+<!-- Bloque css -->
+{% block css%}
+    <link rel="stylesheet" href="{% static 'app/css/app_desarrollo.css' %}">
+{% endblock %}
+
+{% block content%}
+    <main>
+        <h1>UPS!!</h1>
+        
+        <div class="container">
+            <img src="{% static 'app/img/maintenance.svg' %}" alt="Imagen de Mantenimiento">
+            <h4>Está herramienta aún está en desarrollo.</h4>
+        </div>
+        
+    </main>
+{% endblock %}

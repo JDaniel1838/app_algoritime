@@ -1,0 +1,44 @@
+<!-- Herencia -->
+{% extends 'Algoritime_app/base.html' %}
+
+<!-- Importamos static -->
+{% load static %}
+<!-- Bloque css -->
+
+{% block title%} 
+    {{ articulo.titulo }}
+{% endblock %}
+
+{% block css%}
+    <link rel="stylesheet" href="{% static 'app/css/articulo.css' %}">
+{% endblock %}
+
+{% block content%}
+    <main>
+        <img class="img-banner" src="{{ articulo.imagen.url }}" alt="">
+        <h1>{{ articulo.titulo }}</h1>
+        <h4>{{ articulo.created }}</h4>
+        <div class="descripcion">
+            <p>{{articulo.descripcion}}
+            </p>
+        </div>
+        
+        <div class="content" id="content">
+            
+            {{articulo.contenido}}
+        </div>
+
+        <h3 class="autor-art">{{articulo.autor.first_name}} {{articulo.autor.last_name}}</h3>
+
+    </main>
+{% endblock %}
+
+{% block JavaScript %}
+    <script>
+        
+        let content = document.getElementById("content");
+        console.log(JSON.stringify(content.innerText));
+        content.innerHTML = JSON.stringify(content.innerText);
+
+    </script>
+{% endblock %}

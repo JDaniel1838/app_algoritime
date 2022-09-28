@@ -1,0 +1,53 @@
+{% extends 'Algoritime_app/base.html' %}
+
+<!-- Importamos static -->
+{% load static %}
+
+{% block title%} 
+    Recursos
+{% endblock %}
+
+<!-- Bloque css -->
+{% block css%}
+    <link rel="stylesheet" href="{% static 'app/css/recursos.css' %}">
+{% endblock %}
+
+{% block content%}
+    <main>
+        <h1>RECURSOS UTILIZADOS</h1>
+        
+        <div class="container">
+            <div>
+                
+                <a target="_blank" href="https://www.pexels.com/es-es/foto/persona-sosteniendo-una-tiza-frente-a-la-pizarra-714699/?utm_content=attributionCopyText&utm_medium=referral&utm_source=pexels">Foto de JESHOOTS.com en Pexels</a>
+            </div>
+            
+            <div>
+                Icons made by <a target="_blank" href="https://www.freepik.com" title="Freepik">Freepik</a> 
+                from <a target="_blank" href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a>
+            </div>
+            
+            <div>
+                In this link, you can see on the right side of the icon the name Pixel perfect: <a target="_blank" href="https://www.flaticon.es/icono-gratis/inteligencia-emocional_3576271?term=idea&page=1&position=22&page=1&position=22&related_id=3576271&origin=search">here</a>
+            </div>
+            
+            <div>
+                <h3>Tipografías Utilizadas</h3>
+                <h4>Ubuntu</h4>
+                <p>Ubuntu-Light.ttf: Copyright 2011 Canonical Ltd. Licensed under the Ubuntu Font Licence 1.0</p>
+                <p>Ubuntu-Regular.ttf: Copyright 2011 Canonical Ltd. Licensed under the Ubuntu Font Licence 1.0</p>
+                <p>Ubuntu-Medium.ttf: Copyright 2011 Canonical Ltd. Licensed under the Ubuntu Font Licence 1.0</p>
+                <p>Ubuntu-Bold.ttf: Copyright 2011 Canonical Ltd. Licensed under the Ubuntu Font Licence 1.0</p>
+                <br>
+                <h4>Open Sans</h4>
+                <p>OpenSans-Light.ttf: Digitized data copyright 2010-2011, Google Corporation.</p>
+                <p>OpenSans-Regular.ttf: Digitized data copyright 2010-2011, Google Corporation.</p>
+                <p>OpenSans-SemiBold.ttf: Digitized data copyright 2011, Google Corporation.</p>
+                <p>OpenSans-Bold.ttf: Digitized data copyright 2010-2011, Google Corporation.</p>
+                <p>OpenSans-ExtraBold.ttf: Digitized data copyright 2011, Google Corporation.</p>
+            </div>
+        </div>
+        
+    </main>
+
+{% endblock %}

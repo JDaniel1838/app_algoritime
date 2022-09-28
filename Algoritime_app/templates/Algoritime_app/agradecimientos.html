@@ -1,0 +1,57 @@
+<!-- Herencia -->
+{% extends 'Algoritime_app/base.html' %}
+
+<!-- Importamos static -->
+{% load static %}
+
+{% block title%} 
+    Agradecimientos
+{% endblock %}
+
+<!-- Bloque css -->
+{% block css%}
+    <link rel="stylesheet" href="{% static 'app/css/agradecimientos.css' %}">
+{% endblock %}
+
+{% block tipografia%} 
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Italianno&display=swap" rel="stylesheet">
+{% endblock %}
+
+
+{% block content%}
+    <main>
+        <h1>AGRADECIMIENTOS</h1>
+        <h2>Agradecemos la ayuda, orientación y apoyo para la realización
+            de este proyecto por parte de todos nuestros docentes educativos
+            y en especial a:</h2>
+        
+        <div class="container">
+            <div>
+                <h4>M.C. Dorely Alicia Rosete Álvarez</h4>
+            </div>
+            <div>
+                <h4>Ing. Víctor Manuel Bravo Romero</h4>
+            </div>
+            <div>
+                <h4>Ing. Adriana Cruz Palafox</h4>
+            </div>
+            <div>
+                <h4>Lic. Esmeralda Centeno Castillo </h4>
+            </div>
+            <div>
+                <h4>Ing. Elvis Colotla Carvajal</h4>
+            </div>
+            <div>
+                <h4>Ing. Mario Orea León</h4>
+            </div>
+        </div>
+        
+        <div class="thanks">
+            <h3>!Gracias¡</h3>
+        </div>
+    </main>
+{% endblock %}
+</body>
+</html>
